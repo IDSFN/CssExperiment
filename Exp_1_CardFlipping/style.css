@@ -1,0 +1,40 @@
+@import url("normalize.css");
+h1 {
+	margin: 0;
+}
+
+body {
+	height: 100vh;
+	perspective: 20em;
+}
+
+body,
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	height: 10em;
+	width: 10em;
+	background-color: lightgray;
+	color: white;
+	transition: all 0.5s;
+	transform-style: preserve-3d;
+}
+
+.box:hover {
+	transform: rotateY(180deg);
+}
+
+.front,
+.back {
+	backface-visibility: hidden;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+

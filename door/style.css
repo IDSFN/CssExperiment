@@ -1,0 +1,48 @@
+@import url("normalize.css");
+
+.box {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.face {
+	position: relative;
+	z-index: 0;
+	background-color: red;
+	opacity: 0.2;
+	width : 40%;
+	height: 20%;
+	box-shadow: 0.1em 0.12em 0 rgba(0,0,0,0.4) inset;
+	overflow: hidden;
+	display: table;
+}
+
+.face:hover  {
+	z-index: 1;
+}
+
+.face:hover .lock {
+	left: 0;
+	z-index: -1;
+}
+
+.lock {
+	position: absolute;
+	top: 0;
+	left: -100%;
+	background-color: blue;
+	width : 100%;
+	height: 100%;
+	transition: all 1s cubic-bezier(0, 1.67, 0.99, 0.57);
+	z-index: 1;
+}
+
+h1 {
+	color:white;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
